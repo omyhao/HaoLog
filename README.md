@@ -15,5 +15,5 @@
 # 可改进点
 - 延迟格式化
 - 优化无止尽
-- Buffer中write_state[size+1]用来保存bufer使用的个数，在push的时候对齐fetch_add，直接访问数组最后一个元素，会造成上下文的不断的切换，这里还可以想办法优化
+- Buffer中write_state[size+1]用来保存bufer使用的个数，在push的时候对其fetch_add，直接访问数组最后一个元素，会造成上下文的不断的切换，这里还可以想办法优化
 - queue中的Buffer pop之后，考虑如何复用，避免内存的频繁申请
